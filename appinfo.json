@@ -5,5 +5,5 @@
 	"type": "web",
 	"main": "index.html",
 	"title": "hCard Contact Importer",
-	"icon": "icon.png"
+	"icon": "images/icon-48.png"
 }
