@@ -3,6 +3,9 @@ IPK=$(PKG)_0.1.0_all.ipk
 
 package: $(IPK)
 
+clean:
+	rm $(IPK)
+
 $(IPK):
 	palm-package -X excludes .
 

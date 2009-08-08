@@ -4,6 +4,6 @@
 	"vendor": "Edward O'Connor",
 	"type": "web",
 	"main": "index.html",
-	"title": "hCard contact importer",
+	"title": "hCard Contact Importer",
 	"icon": "icon.png"
 }

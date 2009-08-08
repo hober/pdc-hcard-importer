@@ -1,32 +1,35 @@
 function SiteViewAssistant() {
-	/* this is the creator function for your scene assistant object. It will be passed all the 
-	   additional parameters (after the scene name) that were passed to pushScene. The reference
-	   to the scene controller (this.controller) has not be established yet, so any initialization
-	   that needs the scene controller should be done in the setup function below. */
 }
+
+SiteViewAssistant.prototype.importHandler = function() {
+    this.sceneAssistant.outputDisplay.innerHTML = "Thanks!";
+};
 
 SiteViewAssistant.prototype.setup = function() {
-	/* this function is for setup tasks that have to happen when the scene is first created */
-		
-	/* use Mojo.View.render to render view templates and add them to the scene, if needed. */
-	
-	/* setup widgets here */
-	
-	/* add event handlers to listen to events from widgets */
-}
+    var title = this.controller.get('siteViewTitle');
+    var summary = this.controller.get('siteViewSummary');
+    title.innerHTML = "hCard Contact Importer";
+    summary.innerHTML = "Please enter the URL to import:";
+    this.urlModel = {value: "http://"};
+    this.controller.setupWidget("urlToImport", {
+        hintText: "",
+        autoReplace: false,
+        textCase: Mojo.Widget.steModeLowerCase,
+        enterSubmits: false
+    }, this.urlModel);
+    this.importModel = {label: "Import", disabled: false};
+    this.controller.setupWidget("importButton", {
+        type: Mojo.Widget.activityButton},
+        this.importModel);
+    this.controller.listen("importButton", Mojo.Event.tap,
+        this.importHandler.bindAsEventListener(this));
+};
 
 SiteViewAssistant.prototype.activate = function(event) {
-	/* put in event handlers here that should only be in effect when this scene is active. For
-	   example, key handlers that are observing the document */
-}
-
+};
 
 SiteViewAssistant.prototype.deactivate = function(event) {
-	/* remove any event handlers you added in activate and do any other cleanup that should happen before
-	   this scene is popped or another scene is pushed on top */
-}
+};
 
 SiteViewAssistant.prototype.cleanup = function(event) {
-	/* this function should do any cleanup needed before the scene is destroyed as 
-	   a result of being popped off the scene stack */
-}
+};
