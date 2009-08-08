@@ -1,0 +1,9 @@
+{
+	"id": "org.cfhp.hcardimport",
+	"version": "0.1.0",
+	"vendor": "Edward O'Connor",
+	"type": "web",
+	"main": "index.html",
+	"title": "hCard contact importer",
+	"icon": "icon.png"
+}
