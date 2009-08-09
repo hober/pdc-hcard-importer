@@ -2,7 +2,6 @@ function SiteViewAssistant() {
 }
 
 SiteViewAssistant.prototype.importHandler = function() {
-    Mojo.Controller.errorDialog(arguments, this.controller.window);
     this.controller.pushScene("import-view");
 };
 
