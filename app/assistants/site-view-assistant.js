@@ -2,7 +2,8 @@ function SiteViewAssistant() {
 }
 
 SiteViewAssistant.prototype.importHandler = function() {
-    this.sceneAssistant.outputDisplay.innerHTML = "Thanks!";
+    Mojo.Controller.errorDialog(arguments, this.controller.window);
+    this.controller.pushScene("import-view");
 };
 
 SiteViewAssistant.prototype.setup = function() {

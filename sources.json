@@ -3,5 +3,9 @@
     {
         "scenes": "site-view",
         "source": "app\/assistants\/site-view-assistant.js"
+    },
+    {
+        "scenes": "import-view",
+        "source": "app\/assistants\/import-view-assistant.js"
     }
 ]
